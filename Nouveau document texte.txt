@@ -1,2 +1,0 @@
-qu'une connection possible
-https://realpython.com/python-sockets/#multi-connection-server

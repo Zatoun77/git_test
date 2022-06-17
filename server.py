@@ -17,6 +17,7 @@ class ClientThread(threading.Thread):
         while True:
             try:
                 data = self.clientsocket.recv(2048).decode()
+                print('reçu :',data)
                 if data == "stop":
                     reply = "Fin de la connection"
                     self.clientsocket.send(reply.encode())
@@ -24,7 +25,7 @@ class ClientThread(threading.Thread):
                 
                 reply = "Bien recu"
 
-                print('recue :',data)
+                
                 print('envoyer :',reply)
                 self.clientsocket.send(reply.encode())
             except:
